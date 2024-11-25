@@ -1,0 +1,1865 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>contoh &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'SVD';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSVD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/SVD.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>contoh</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;tfidf_output.csv&#39;</span><span class="p">)</span>
+
+<span class="n">jumlah_baris</span><span class="p">,</span> <span class="n">jumlah_kolom</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah baris dalam dataset:&quot;</span><span class="p">,</span> <span class="n">jumlah_baris</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kolom dalam dataset:&quot;</span><span class="p">,</span> <span class="n">jumlah_kolom</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">U</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">Vt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">U_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>  
+<span class="n">singular_values_vector</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Singular Values&#39;</span><span class="p">])</span>  
+<span class="n">Vt_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Vt</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah baris dalam dataset: 150
+Jumlah kolom dalam dataset: 5838
+
+     abah     abang  abdul  abdullah  abdulmadjid  abu     acara  accounting  \
+0     0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+1     0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+2     0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+3     0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+4     0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+..    ...       ...    ...       ...          ...  ...       ...         ...   
+145   0.0  0.035064    0.0       0.0          0.0  0.0  0.000000         0.0   
+146   0.0  0.000000    0.0       0.0          0.0  0.0  0.020922         0.0   
+147   0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+148   0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+149   0.0  0.000000    0.0       0.0          0.0  0.0  0.000000         0.0   
+
+     aceh   ad  ...  zaenur    zahrul     zaman  zarof  zawawi  zero  zona  \
+0     0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+1     0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+2     0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+3     0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+4     0.0  0.0  ...     0.0  0.000000  0.127734    0.0     0.0   0.0   0.0   
+..    ...  ...  ...     ...       ...       ...    ...     ...   ...   ...   
+145   0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+146   0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+147   0.0  0.0  ...     0.0  0.063384  0.000000    0.0     0.0   0.0   0.0   
+148   0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+149   0.0  0.0  ...     0.0  0.000000  0.000000    0.0     0.0   0.0   0.0   
+
+     zoom   zr  zulhas  
+0     0.0  0.0     0.0  
+1     0.0  0.0     0.0  
+2     0.0  0.0     0.0  
+3     0.0  0.0     0.0  
+4     0.0  0.0     0.0  
+..    ...  ...     ...  
+145   0.0  0.0     0.0  
+146   0.0  0.0     0.0  
+147   0.0  0.0     0.0  
+148   0.0  0.0     0.0  
+149   0.0  0.0     0.0  
+
+[150 rows x 5838 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matrix U : &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">U_matrix</span><span class="p">)</span>
+<span class="c1"># baris_U, kolom_U = U_matrix.shape</span>
+<span class="c1"># print(&#39;Jumlah baris dalam matrix ortogonal = &#39;, baris_U)</span>
+<span class="c1"># print(&#39;Jumlah kolom dalam matrix ortogonal = &#39;, kolom_U)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matrix U : 
+          0         1         2         3         4         5         6    \
+0   -0.101651 -0.218076  0.085262 -0.004436  0.009796 -0.024970  0.000925   
+1   -0.081644 -0.157359  0.060723 -0.002154  0.013032 -0.039288  0.014266   
+2   -0.060106 -0.002104 -0.066598  0.041061 -0.031836  0.028333  0.145573   
+3   -0.032115  0.001864 -0.019388  0.007081 -0.009222  0.005531  0.014329   
+4   -0.081175  0.030370 -0.017465 -0.076919  0.025548 -0.000595  0.025656   
+..        ...       ...       ...       ...       ...       ...       ...   
+145 -0.088126  0.037591 -0.003343 -0.055449  0.016664  0.002122  0.004130   
+146 -0.093858 -0.117262  0.016197 -0.015387 -0.009098  0.005925 -0.015997   
+147 -0.082983  0.036775  0.011002 -0.003927  0.013009 -0.002362  0.040119   
+148 -0.050937  0.007214 -0.057606  0.008460 -0.057969 -0.009347  0.020765   
+149 -0.079035 -0.006563 -0.027790  0.037797  0.016681  0.018462  0.043392   
+
+          7         8         9    ...       140       141       142  \
+0   -0.003977  0.006143 -0.007521  ...  0.048056 -0.021237  0.004041   
+1    0.004581 -0.003684 -0.001999  ... -0.003237 -0.000998  0.008936   
+2   -0.166840  0.047202  0.037805  ...  0.000978  0.001916  0.003679   
+3    0.017132 -0.022331  0.009704  ...  0.001610 -0.000364  0.000384   
+4    0.020740 -0.053916 -0.002632  ...  0.007858 -0.010345  0.007423   
+..        ...       ...       ...  ...       ...       ...       ...   
+145  0.022940 -0.042091  0.068065  ... -0.005119 -0.010280 -0.000196   
+146 -0.021017 -0.004186  0.016929  ...  0.024900 -0.003005 -0.007269   
+147  0.056160 -0.146445 -0.047782  ...  0.008434  0.005751  0.014997   
+148  0.071112  0.062656  0.276986  ...  0.014750 -0.012724  0.004192   
+149  0.066991 -0.141880 -0.025642  ... -0.032669 -0.023645  0.017195   
+
+          143       144       145       146       147       148           149  
+0   -0.004129  0.002521 -0.002638  0.000789 -0.001472  0.009830 -4.100258e-17  
+1    0.001449  0.002453  0.001046  0.001197 -0.005032  0.005222  1.121203e-16  
+2    0.001165 -0.001351  0.002075 -0.015840  0.021372  0.002154  9.496533e-17  
+3    0.001175  0.000911  0.001275  0.001408 -0.001387 -0.000286  1.534327e-16  
+4    0.000073  0.005225  0.008838 -0.000572 -0.004345  0.001357 -1.486825e-16  
+..        ...       ...       ...       ...       ...       ...           ...  
+145 -0.003200 -0.000045  0.000164  0.003935 -0.001133 -0.003692 -1.141286e-16  
+146  0.007640 -0.005108 -0.006248 -0.005756  0.001160 -0.005658 -1.898796e-17  
+147  0.012316  0.007670  0.001329  0.006668  0.000920  0.002271 -5.738835e-17  
+148 -0.000728  0.002147 -0.007389 -0.000186 -0.000412  0.002632 -6.818813e-17  
+149 -0.000475  0.003145  0.027953  0.011613 -0.010969 -0.000916 -7.402402e-17  
+
+[150 rows x 150 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;singular value : &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">singular_values_vector</span><span class="p">)</span>
+<span class="c1"># print(S)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>singular value : 
+     Singular Values
+0       3.389142e+00
+1       2.401895e+00
+2       2.207726e+00
+3       2.012429e+00
+4       1.920530e+00
+..               ...
+145     3.182176e-01
+146     2.908966e-01
+147     2.864034e-01
+148     2.297547e-01
+149     2.142653e-15
+
+[150 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matrix V^t : &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Vt_matrix</span><span class="p">)</span>
+<span class="c1"># output_file = &#39;matrix_V^t.csv&#39;</span>
+<span class="c1"># Vt_matrix.to_csv(output_file, index=False)</span>
+<span class="c1"># baris_Vt, kolom_Vt = Vt_matrix.shape</span>
+<span class="c1"># print(&#39;Jumlah baris dalam transpos dari matriks ortogonal= &#39;, baris_Vt)</span>
+<span class="c1"># print(&#39;Jumlah kolom dalam transpos dari matriks ortogonal = &#39;, baris_Vt)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matrix V^t : 
+          abah     abang     abdul  abdullah  abdulmadjid       abu     acara  \
+0    -0.025752 -0.006033 -0.004730 -0.002145    -0.001016 -0.001941 -0.036841   
+1     0.037162  0.003576 -0.000450  0.003238     0.000272  0.000321  0.039949   
+2     0.052765 -0.002157 -0.005164  0.004677    -0.001543 -0.001666  0.054234   
+3     0.027905 -0.011678  0.002559  0.002881     0.000031  0.002198  0.021869   
+4    -0.007130  0.004765 -0.001588 -0.000825    -0.001679  0.001177 -0.007462   
+...        ...       ...       ...       ...          ...       ...       ...   
+5833  0.000405  0.000062  0.000222 -0.000810     0.000150 -0.000094  0.000203   
+5834 -0.000150  0.000358 -0.000486 -0.000164     0.004140 -0.000356 -0.000078   
+5835  0.001038  0.000022 -0.001285  0.000239     0.002463  0.000264  0.001935   
+5836  0.000154  0.000944  0.009559 -0.000157    -0.001217 -0.000007 -0.001265   
+5837 -0.000292 -0.000115  0.000509 -0.000116     0.000226 -0.000164 -0.000505   
+
+      accounting      aceh        ad  ...    zaenur    zahrul     zaman  \
+0      -0.000935 -0.010323 -0.004352  ... -0.005428 -0.001552 -0.003059   
+1      -0.000468  0.003122 -0.000727  ... -0.015829  0.000970  0.001615   
+2      -0.001199 -0.020708 -0.004790  ...  0.006403  0.000316 -0.001010   
+3       0.000545 -0.002724  0.002128  ... -0.001466 -0.000124 -0.004882   
+4      -0.000833 -0.034857 -0.001348  ...  0.000350  0.000429  0.001699   
+...          ...       ...       ...  ...       ...       ...       ...   
+5833    0.000277  0.000165 -0.000023  ...  0.000059 -0.000010  0.000577   
+5834   -0.000951 -0.001008 -0.000372  ...  0.000434 -0.000135  0.000743   
+5835    0.000164 -0.000089  0.001231  ... -0.000131  0.000106  0.001018   
+5836    0.001035  0.000235 -0.019356  ...  0.000768 -0.000098 -0.000042   
+5837    0.001100  0.000145  0.000179  ...  0.000127  0.000061  0.000073   
+
+         zarof    zawawi      zero      zona      zoom        zr    zulhas  
+0    -0.002598 -0.003459 -0.001630 -0.001114 -0.004923 -0.003297 -0.001177  
+1    -0.000687  0.005586 -0.000009  0.000367 -0.000289 -0.001011  0.000204  
+2    -0.003053  0.008503 -0.001472 -0.000587 -0.005030 -0.004014 -0.001697  
+3     0.001770  0.004430  0.000840  0.000221  0.002176  0.002319  0.000931  
+4    -0.001506 -0.001191 -0.000021 -0.000623 -0.003697 -0.001907 -0.001016  
+...        ...       ...       ...       ...       ...       ...       ...  
+5833  0.000051 -0.000039  0.996618 -0.000112 -0.000125 -0.000052 -0.000191  
+5834  0.000088  0.000117 -0.000134  0.986875  0.000202 -0.000087  0.000173  
+5835 -0.000363 -0.001070 -0.000215  0.000437  0.977129  0.001834  0.000813  
+5836  0.000477  0.000044 -0.000036 -0.000098  0.000990  0.978256 -0.000169  
+5837  0.000272  0.000012 -0.000198  0.000207  0.001338 -0.000338  0.993743  
+
+[5838 rows x 5838 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">sigma</span><span class="p">,</span> <span class="n">singular_values_vector</span><span class="p">)</span>
+<span class="n">sigma</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3.3891421 , 0.        , 0.        , ..., 0.        , 0.        ,
+        0.        ],
+       [0.        , 2.40189458, 0.        , ..., 0.        , 0.        ,
+        0.        ],
+       [0.        , 0.        , 2.20772608, ..., 0.        , 0.        ,
+        0.        ],
+       ...,
+       [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+        0.        ],
+       [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+        0.        ],
+       [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+        0.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reconstructed</span> <span class="o">=</span> <span class="n">U</span> <span class="o">@</span> <span class="n">sigma</span> <span class="o">@</span> <span class="n">Vt</span>
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">reconstructed</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hasil dari matrix A yang di rekonstruksikan : &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hasil dari matrix A yang di rekonstruksikan : 
+             0             1             2             3             4     \
+0    4.597017e-17  3.686287e-18  1.301043e-18  7.806256e-18  3.686287e-18   
+1    1.113476e-16  3.111660e-17 -1.095044e-17  1.409463e-18 -2.070149e-18   
+2    9.123561e-17 -4.256171e-17  6.288373e-18 -1.188557e-17 -3.567872e-17   
+3    3.481644e-17 -3.447424e-17  5.112013e-17  5.488773e-19  1.716258e-17   
+4    3.306817e-18 -2.166371e-17  4.380177e-17  1.572263e-17  2.836629e-17   
+..            ...           ...           ...           ...           ...   
+145  1.168228e-17  3.506357e-02 -3.084555e-17  1.260385e-17 -1.973248e-17   
+146  5.670377e-17 -8.131516e-19  2.818926e-17 -4.770490e-18 -1.602586e-17   
+147  1.244664e-16  1.149254e-17 -5.583641e-17  3.718813e-17 -8.077306e-18   
+148  6.266689e-17 -1.555830e-17 -2.417771e-17  5.692061e-19  5.324788e-17   
+149 -8.673617e-18 -2.482823e-17  5.399327e-17  4.629543e-17 -2.618348e-17   
+
+             5             6             7             8             9     \
+0   -1.821460e-17  1.023487e-16  3.903128e-18 -4.607859e-18 -8.239937e-18   
+1   -2.168404e-18 -9.866240e-18  5.542984e-18  6.776264e-19  2.032879e-17   
+2    7.834716e-17  1.877296e-16  9.893345e-19  3.763537e-17  3.773024e-17   
+3    3.330195e-17  7.579928e-17  1.396980e-17  2.662309e-17 -1.337634e-17   
+4   -2.023053e-17  5.870955e-17 -2.696614e-17 -1.209902e-17  1.897354e-18   
+..            ...           ...           ...           ...           ...   
+145  1.846193e-17 -1.084202e-18  1.117999e-17 -7.595514e-17  4.466913e-17   
+146 -8.364874e-18  2.092155e-02 -2.551941e-17 -3.997996e-19  1.593777e-17   
+147 -2.005774e-17  2.363561e-17  2.060916e-17 -7.535205e-18  4.278533e-17   
+148 -1.436568e-18  1.626303e-17 -9.169132e-18 -9.479315e-17  4.092863e-17   
+149  7.372575e-18  4.336809e-17 -1.721171e-17  2.938188e-17  6.179952e-17   
+
+     ...          5828          5829          5830          5831  \
+0    ... -1.062518e-17  1.040834e-17 -2.228035e-17  0.000000e+00   
+1    ... -1.127570e-17  6.179952e-18 -2.604796e-17 -8.497435e-18   
+2    ...  9.909608e-17  2.210417e-17  1.775381e-17  1.095044e-17   
+3    ... -3.263449e-17  1.623593e-17 -8.456777e-18  8.646512e-18   
+4    ... -5.658180e-17  1.219727e-17  1.277337e-01  2.271404e-17   
+..   ...           ...           ...           ...           ...   
+145  ...  1.919038e-17  7.453890e-19 -6.199604e-17 -2.667137e-17   
+146  ...  2.272488e-16  1.463673e-18 -8.931115e-18  9.324139e-18   
+147  ...  2.537033e-17  6.338371e-02  2.396087e-17 -5.117434e-17   
+148  ... -4.786753e-17 -6.451003e-18  4.617346e-17 -1.870249e-18   
+149  ...  8.153200e-17 -5.312591e-18 -8.700722e-18  5.464379e-17   
+
+             5832          5833          5834          5835          5836  \
+0    4.228388e-18 -1.951564e-18  8.673617e-18 -1.641211e-17 -1.170938e-17   
+1    9.812030e-18  3.784543e-18 -3.794708e-18 -1.485357e-17  1.078781e-17   
+2   -2.976474e-18  8.737992e-18  9.202166e-18 -6.495726e-17  3.783866e-17   
+3   -1.673398e-17  1.307734e-17 -9.703609e-18  2.431662e-17  8.267042e-19   
+4   -1.366095e-17  4.587530e-18 -1.951564e-17 -1.398621e-17  1.680513e-17   
+..            ...           ...           ...           ...           ...   
+145 -2.411333e-17  2.405065e-17  1.065229e-17 -3.118436e-17  1.168228e-17   
+146  1.192622e-18 -2.637661e-18  2.645453e-17 -5.637851e-18  6.505213e-19   
+147 -1.569383e-17 -8.904010e-18 -1.225148e-17 -1.158572e-17 -5.692061e-18   
+148 -8.958220e-18 -6.261268e-18  1.897354e-18 -3.995285e-17 -1.573448e-17   
+149  4.553649e-18 -1.641211e-17  9.974660e-18  1.225148e-17  4.965646e-17   
+
+             5837  
+0   -1.515173e-17  
+1    1.843144e-17  
+2    1.124860e-18  
+3    7.687671e-18  
+4   -1.000177e-17  
+..            ...  
+145 -3.919645e-18  
+146  9.784925e-18  
+147 -1.146544e-17  
+148  1.359318e-17  
+149 -1.368805e-17  
+
+[150 rows x 5838 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">csr_matrix</span>
+
+<span class="n">svd</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2870</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">data_baru</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="c1"># print(svd.explained_variance_ratio_)</span>
+<span class="n">data_baru</span><span class="o">.</span><span class="n">shape</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">data_baru</span><span class="p">)</span>
+<span class="n">hasil_data_baru</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_baru</span><span class="p">)</span> 
+<span class="n">hasil_data_baru</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>140</th>
+      <th>141</th>
+      <th>142</th>
+      <th>143</th>
+      <th>144</th>
+      <th>145</th>
+      <th>146</th>
+      <th>147</th>
+      <th>148</th>
+      <th>149</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.344509</td>
+      <td>0.523797</td>
+      <td>0.188235</td>
+      <td>0.008927</td>
+      <td>0.018813</td>
+      <td>-0.046429</td>
+      <td>0.001672</td>
+      <td>0.006847</td>
+      <td>0.009628</td>
+      <td>-0.011354</td>
+      <td>...</td>
+      <td>0.018970</td>
+      <td>0.007893</td>
+      <td>0.001481</td>
+      <td>0.001367</td>
+      <td>-0.000810</td>
+      <td>-0.000839</td>
+      <td>0.000229</td>
+      <td>0.000422</td>
+      <td>0.002258</td>
+      <td>6.179952e-18</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.276705</td>
+      <td>0.377959</td>
+      <td>0.134061</td>
+      <td>0.004335</td>
+      <td>0.025029</td>
+      <td>-0.073051</td>
+      <td>0.025786</td>
+      <td>-0.007885</td>
+      <td>-0.005774</td>
+      <td>-0.003017</td>
+      <td>...</td>
+      <td>-0.001278</td>
+      <td>0.000371</td>
+      <td>0.003275</td>
+      <td>-0.000480</td>
+      <td>-0.000788</td>
+      <td>0.000333</td>
+      <td>0.000348</td>
+      <td>0.001441</td>
+      <td>0.001200</td>
+      <td>4.407282e-17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.203706</td>
+      <td>0.005054</td>
+      <td>-0.147030</td>
+      <td>-0.082632</td>
+      <td>-0.061143</td>
+      <td>0.052681</td>
+      <td>0.263122</td>
+      <td>0.287196</td>
+      <td>0.073976</td>
+      <td>0.057073</td>
+      <td>...</td>
+      <td>0.000386</td>
+      <td>-0.000712</td>
+      <td>0.001348</td>
+      <td>-0.000386</td>
+      <td>0.000434</td>
+      <td>0.000660</td>
+      <td>-0.004608</td>
+      <td>-0.006121</td>
+      <td>0.000495</td>
+      <td>8.473040e-17</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.108841</td>
+      <td>-0.004477</td>
+      <td>-0.042803</td>
+      <td>-0.014250</td>
+      <td>-0.017711</td>
+      <td>0.010284</td>
+      <td>0.025899</td>
+      <td>-0.029491</td>
+      <td>-0.034997</td>
+      <td>0.014650</td>
+      <td>...</td>
+      <td>0.000636</td>
+      <td>0.000135</td>
+      <td>0.000141</td>
+      <td>-0.000389</td>
+      <td>-0.000293</td>
+      <td>0.000406</td>
+      <td>0.000410</td>
+      <td>0.000397</td>
+      <td>-0.000066</td>
+      <td>-8.857932e-17</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.275113</td>
+      <td>-0.072945</td>
+      <td>-0.038558</td>
+      <td>0.154794</td>
+      <td>0.049065</td>
+      <td>-0.001107</td>
+      <td>0.046373</td>
+      <td>-0.035701</td>
+      <td>-0.084498</td>
+      <td>-0.003973</td>
+      <td>...</td>
+      <td>0.003102</td>
+      <td>0.003845</td>
+      <td>0.002720</td>
+      <td>-0.000024</td>
+      <td>-0.001679</td>
+      <td>0.002812</td>
+      <td>-0.000166</td>
+      <td>0.001245</td>
+      <td>0.000312</td>
+      <td>-6.976841e-17</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>0.298672</td>
+      <td>-0.090290</td>
+      <td>-0.007381</td>
+      <td>0.111587</td>
+      <td>0.032004</td>
+      <td>0.003945</td>
+      <td>0.007465</td>
+      <td>-0.039489</td>
+      <td>-0.065966</td>
+      <td>0.102755</td>
+      <td>...</td>
+      <td>-0.002021</td>
+      <td>0.003821</td>
+      <td>-0.000072</td>
+      <td>0.001059</td>
+      <td>0.000014</td>
+      <td>0.000052</td>
+      <td>0.001145</td>
+      <td>0.000324</td>
+      <td>-0.000848</td>
+      <td>5.811324e-17</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>0.318100</td>
+      <td>0.281652</td>
+      <td>0.035758</td>
+      <td>0.030964</td>
+      <td>-0.017474</td>
+      <td>0.011016</td>
+      <td>-0.028914</td>
+      <td>0.036178</td>
+      <td>-0.006561</td>
+      <td>0.025556</td>
+      <td>...</td>
+      <td>0.009829</td>
+      <td>0.001117</td>
+      <td>-0.002664</td>
+      <td>-0.002529</td>
+      <td>0.001642</td>
+      <td>-0.001988</td>
+      <td>-0.001674</td>
+      <td>-0.000332</td>
+      <td>-0.001300</td>
+      <td>-6.104058e-17</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>0.281243</td>
+      <td>-0.088329</td>
+      <td>0.024289</td>
+      <td>0.007902</td>
+      <td>0.024985</td>
+      <td>-0.004392</td>
+      <td>0.072515</td>
+      <td>-0.096672</td>
+      <td>-0.229512</td>
+      <td>-0.072135</td>
+      <td>...</td>
+      <td>0.003329</td>
+      <td>-0.002137</td>
+      <td>0.005496</td>
+      <td>-0.004077</td>
+      <td>-0.002465</td>
+      <td>0.000423</td>
+      <td>0.001940</td>
+      <td>-0.000264</td>
+      <td>0.000522</td>
+      <td>-2.032879e-17</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>0.172632</td>
+      <td>-0.017327</td>
+      <td>-0.127179</td>
+      <td>-0.017026</td>
+      <td>-0.111332</td>
+      <td>-0.017380</td>
+      <td>0.037532</td>
+      <td>-0.122410</td>
+      <td>0.098197</td>
+      <td>0.418154</td>
+      <td>...</td>
+      <td>0.005823</td>
+      <td>0.004729</td>
+      <td>0.001536</td>
+      <td>0.000241</td>
+      <td>-0.000690</td>
+      <td>-0.002351</td>
+      <td>-0.000054</td>
+      <td>0.000118</td>
+      <td>0.000605</td>
+      <td>-6.621765e-17</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>0.267862</td>
+      <td>0.015765</td>
+      <td>-0.061354</td>
+      <td>-0.076064</td>
+      <td>0.032036</td>
+      <td>0.034327</td>
+      <td>0.078431</td>
+      <td>-0.115316</td>
+      <td>-0.222357</td>
+      <td>-0.038710</td>
+      <td>...</td>
+      <td>-0.012896</td>
+      <td>0.008788</td>
+      <td>0.006302</td>
+      <td>0.000157</td>
+      <td>-0.001011</td>
+      <td>0.008895</td>
+      <td>0.003378</td>
+      <td>0.003142</td>
+      <td>-0.000210</td>
+      <td>-1.039750e-16</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 150 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hasil_data_baru</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Megapolitan&#39;</span><span class="p">,</span> <span class="s1">&#39;Nasional&#39;</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">hasil_data_baru</span><span class="p">))</span>
+<span class="n">hasil_data_baru</span>
+<span class="n">hasil_data_baru</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data_baru.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from sklearn.linear_model import LogisticRegression</span>
+<span class="c1"># model = LogisticRegression()</span>
+<span class="c1"># model.fit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="contoh">
+<h1>contoh<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">svd</span>
+
+<span class="c1"># Load the TF-IDF matrix data from the uploaded file</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;tfidf_output.csv&#39;</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+<span class="c1"># Perform Singular Value Decomposition (SVD)</span>
+<span class="n">U</span><span class="p">,</span> <span class="n">singular_values</span><span class="p">,</span> <span class="n">Vt</span> <span class="o">=</span> <span class="n">svd</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+<span class="c1"># Prepare results: U, singular values (Sigma), and V transpose</span>
+<span class="n">U_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>  <span class="c1"># U matrix with original index</span>
+<span class="n">singular_values_vector</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">singular_values</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Singular Values&#39;</span><span class="p">])</span>  <span class="c1"># Sigma in diagonal vector form</span>
+<span class="n">Vt_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Vt</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>  <span class="c1"># V transpose with original columns</span>
+
+<span class="n">U_matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>140</th>
+      <th>141</th>
+      <th>142</th>
+      <th>143</th>
+      <th>144</th>
+      <th>145</th>
+      <th>146</th>
+      <th>147</th>
+      <th>148</th>
+      <th>149</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.101651</td>
+      <td>-0.218076</td>
+      <td>0.085262</td>
+      <td>-0.004436</td>
+      <td>0.009796</td>
+      <td>-0.024970</td>
+      <td>0.000925</td>
+      <td>-0.003977</td>
+      <td>0.006143</td>
+      <td>-0.007521</td>
+      <td>...</td>
+      <td>0.048056</td>
+      <td>-0.021237</td>
+      <td>0.004041</td>
+      <td>-0.004129</td>
+      <td>0.002521</td>
+      <td>-0.002638</td>
+      <td>0.000789</td>
+      <td>-0.001472</td>
+      <td>0.009830</td>
+      <td>5.909180e-17</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.081644</td>
+      <td>-0.157359</td>
+      <td>0.060723</td>
+      <td>-0.002154</td>
+      <td>0.013032</td>
+      <td>-0.039288</td>
+      <td>0.014266</td>
+      <td>0.004581</td>
+      <td>-0.003684</td>
+      <td>-0.001999</td>
+      <td>...</td>
+      <td>-0.003237</td>
+      <td>-0.000998</td>
+      <td>0.008936</td>
+      <td>0.001449</td>
+      <td>0.002453</td>
+      <td>0.001046</td>
+      <td>0.001197</td>
+      <td>-0.005032</td>
+      <td>0.005222</td>
+      <td>-1.143156e-16</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.060106</td>
+      <td>-0.002104</td>
+      <td>-0.066598</td>
+      <td>0.041061</td>
+      <td>-0.031836</td>
+      <td>0.028333</td>
+      <td>0.145573</td>
+      <td>-0.166840</td>
+      <td>0.047202</td>
+      <td>0.037805</td>
+      <td>...</td>
+      <td>0.000978</td>
+      <td>0.001916</td>
+      <td>0.003679</td>
+      <td>0.001165</td>
+      <td>-0.001351</td>
+      <td>0.002075</td>
+      <td>-0.015840</td>
+      <td>0.021372</td>
+      <td>0.002154</td>
+      <td>-1.217165e-16</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.032115</td>
+      <td>0.001864</td>
+      <td>-0.019388</td>
+      <td>0.007081</td>
+      <td>-0.009222</td>
+      <td>0.005531</td>
+      <td>0.014329</td>
+      <td>0.017132</td>
+      <td>-0.022331</td>
+      <td>0.009704</td>
+      <td>...</td>
+      <td>0.001610</td>
+      <td>-0.000364</td>
+      <td>0.000384</td>
+      <td>0.001175</td>
+      <td>0.000911</td>
+      <td>0.001275</td>
+      <td>0.001408</td>
+      <td>-0.001387</td>
+      <td>-0.000286</td>
+      <td>-3.538748e-18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.081175</td>
+      <td>0.030370</td>
+      <td>-0.017465</td>
+      <td>-0.076919</td>
+      <td>0.025548</td>
+      <td>-0.000595</td>
+      <td>0.025656</td>
+      <td>0.020740</td>
+      <td>-0.053916</td>
+      <td>-0.002632</td>
+      <td>...</td>
+      <td>0.007858</td>
+      <td>-0.010345</td>
+      <td>0.007423</td>
+      <td>0.000073</td>
+      <td>0.005225</td>
+      <td>0.008838</td>
+      <td>-0.000572</td>
+      <td>-0.004345</td>
+      <td>0.001357</td>
+      <td>-1.246413e-16</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>-0.088126</td>
+      <td>0.037591</td>
+      <td>-0.003343</td>
+      <td>-0.055449</td>
+      <td>0.016664</td>
+      <td>0.002122</td>
+      <td>0.004130</td>
+      <td>0.022940</td>
+      <td>-0.042091</td>
+      <td>0.068065</td>
+      <td>...</td>
+      <td>-0.005119</td>
+      <td>-0.010280</td>
+      <td>-0.000196</td>
+      <td>-0.003200</td>
+      <td>-0.000045</td>
+      <td>0.000164</td>
+      <td>0.003935</td>
+      <td>-0.001133</td>
+      <td>-0.003692</td>
+      <td>-6.541507e-18</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>-0.093858</td>
+      <td>-0.117262</td>
+      <td>0.016197</td>
+      <td>-0.015387</td>
+      <td>-0.009098</td>
+      <td>0.005925</td>
+      <td>-0.015997</td>
+      <td>-0.021017</td>
+      <td>-0.004186</td>
+      <td>0.016929</td>
+      <td>...</td>
+      <td>0.024900</td>
+      <td>-0.003005</td>
+      <td>-0.007269</td>
+      <td>0.007640</td>
+      <td>-0.005108</td>
+      <td>-0.006248</td>
+      <td>-0.005756</td>
+      <td>0.001160</td>
+      <td>-0.005658</td>
+      <td>7.909501e-17</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>-0.082983</td>
+      <td>0.036775</td>
+      <td>0.011002</td>
+      <td>-0.003927</td>
+      <td>0.013009</td>
+      <td>-0.002362</td>
+      <td>0.040119</td>
+      <td>0.056160</td>
+      <td>-0.146445</td>
+      <td>-0.047782</td>
+      <td>...</td>
+      <td>0.008434</td>
+      <td>0.005751</td>
+      <td>0.014997</td>
+      <td>0.012316</td>
+      <td>0.007670</td>
+      <td>0.001329</td>
+      <td>0.006668</td>
+      <td>0.000920</td>
+      <td>0.002271</td>
+      <td>-2.819195e-17</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>-0.050937</td>
+      <td>0.007214</td>
+      <td>-0.057606</td>
+      <td>0.008460</td>
+      <td>-0.057969</td>
+      <td>-0.009347</td>
+      <td>0.020765</td>
+      <td>0.071112</td>
+      <td>0.062656</td>
+      <td>0.276986</td>
+      <td>...</td>
+      <td>0.014750</td>
+      <td>-0.012724</td>
+      <td>0.004192</td>
+      <td>-0.000728</td>
+      <td>0.002147</td>
+      <td>-0.007389</td>
+      <td>-0.000186</td>
+      <td>-0.000412</td>
+      <td>0.002632</td>
+      <td>-3.762996e-17</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>-0.079035</td>
+      <td>-0.006563</td>
+      <td>-0.027790</td>
+      <td>0.037797</td>
+      <td>0.016681</td>
+      <td>0.018462</td>
+      <td>0.043392</td>
+      <td>0.066991</td>
+      <td>-0.141880</td>
+      <td>-0.025642</td>
+      <td>...</td>
+      <td>-0.032669</td>
+      <td>-0.023645</td>
+      <td>0.017195</td>
+      <td>-0.000475</td>
+      <td>0.003145</td>
+      <td>0.027953</td>
+      <td>0.011613</td>
+      <td>-0.010969</td>
+      <td>-0.000916</td>
+      <td>-4.249617e-17</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 150 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">singular_values_vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Singular Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3.389142e+00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.401895e+00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2.207726e+00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.012429e+00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.920530e+00</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>3.182176e-01</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>2.908966e-01</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>2.864034e-01</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>2.297547e-01</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>2.038907e-15</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Vt_matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abah</th>
+      <th>abang</th>
+      <th>abdul</th>
+      <th>abdullah</th>
+      <th>abdulmadjid</th>
+      <th>abu</th>
+      <th>acara</th>
+      <th>accounting</th>
+      <th>aceh</th>
+      <th>ad</th>
+      <th>...</th>
+      <th>zaenur</th>
+      <th>zahrul</th>
+      <th>zaman</th>
+      <th>zarof</th>
+      <th>zawawi</th>
+      <th>zero</th>
+      <th>zona</th>
+      <th>zoom</th>
+      <th>zr</th>
+      <th>zulhas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.025752</td>
+      <td>-0.006033</td>
+      <td>-0.004730</td>
+      <td>-0.002145</td>
+      <td>-0.001016</td>
+      <td>-0.001941</td>
+      <td>-0.036841</td>
+      <td>-0.000935</td>
+      <td>-0.010323</td>
+      <td>-0.004352</td>
+      <td>...</td>
+      <td>-0.005428</td>
+      <td>-0.001552</td>
+      <td>-0.003059</td>
+      <td>-0.002598</td>
+      <td>-0.003459</td>
+      <td>-0.001630</td>
+      <td>-0.001114</td>
+      <td>-0.004923</td>
+      <td>-0.003297</td>
+      <td>-0.001177</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.037162</td>
+      <td>0.003576</td>
+      <td>-0.000450</td>
+      <td>0.003238</td>
+      <td>0.000272</td>
+      <td>0.000321</td>
+      <td>0.039949</td>
+      <td>-0.000468</td>
+      <td>0.003122</td>
+      <td>-0.000727</td>
+      <td>...</td>
+      <td>-0.015829</td>
+      <td>0.000970</td>
+      <td>0.001615</td>
+      <td>-0.000687</td>
+      <td>0.005586</td>
+      <td>-0.000009</td>
+      <td>0.000367</td>
+      <td>-0.000289</td>
+      <td>-0.001011</td>
+      <td>0.000204</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.052765</td>
+      <td>-0.002157</td>
+      <td>-0.005164</td>
+      <td>0.004677</td>
+      <td>-0.001543</td>
+      <td>-0.001666</td>
+      <td>0.054234</td>
+      <td>-0.001199</td>
+      <td>-0.020708</td>
+      <td>-0.004790</td>
+      <td>...</td>
+      <td>0.006403</td>
+      <td>0.000316</td>
+      <td>-0.001010</td>
+      <td>-0.003053</td>
+      <td>0.008503</td>
+      <td>-0.001472</td>
+      <td>-0.000587</td>
+      <td>-0.005030</td>
+      <td>-0.004014</td>
+      <td>-0.001697</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.027905</td>
+      <td>-0.011678</td>
+      <td>0.002559</td>
+      <td>0.002881</td>
+      <td>0.000031</td>
+      <td>0.002198</td>
+      <td>0.021869</td>
+      <td>0.000545</td>
+      <td>-0.002724</td>
+      <td>0.002128</td>
+      <td>...</td>
+      <td>-0.001466</td>
+      <td>-0.000124</td>
+      <td>-0.004882</td>
+      <td>0.001770</td>
+      <td>0.004430</td>
+      <td>0.000840</td>
+      <td>0.000221</td>
+      <td>0.002176</td>
+      <td>0.002319</td>
+      <td>0.000931</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.007130</td>
+      <td>0.004765</td>
+      <td>-0.001588</td>
+      <td>-0.000825</td>
+      <td>-0.001679</td>
+      <td>0.001177</td>
+      <td>-0.007462</td>
+      <td>-0.000833</td>
+      <td>-0.034857</td>
+      <td>-0.001348</td>
+      <td>...</td>
+      <td>0.000350</td>
+      <td>0.000429</td>
+      <td>0.001699</td>
+      <td>-0.001506</td>
+      <td>-0.001191</td>
+      <td>-0.000021</td>
+      <td>-0.000623</td>
+      <td>-0.003697</td>
+      <td>-0.001907</td>
+      <td>-0.001016</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>5833</th>
+      <td>0.000405</td>
+      <td>0.000062</td>
+      <td>0.000222</td>
+      <td>-0.000810</td>
+      <td>0.000150</td>
+      <td>-0.000094</td>
+      <td>0.000203</td>
+      <td>0.000277</td>
+      <td>0.000165</td>
+      <td>-0.000023</td>
+      <td>...</td>
+      <td>0.000059</td>
+      <td>-0.000010</td>
+      <td>0.000577</td>
+      <td>0.000051</td>
+      <td>-0.000040</td>
+      <td>0.996618</td>
+      <td>-0.000112</td>
+      <td>-0.000125</td>
+      <td>-0.000052</td>
+      <td>-0.000191</td>
+    </tr>
+    <tr>
+      <th>5834</th>
+      <td>-0.000150</td>
+      <td>0.000359</td>
+      <td>-0.000486</td>
+      <td>-0.000165</td>
+      <td>0.004140</td>
+      <td>-0.000355</td>
+      <td>-0.000077</td>
+      <td>-0.000949</td>
+      <td>-0.001007</td>
+      <td>-0.000372</td>
+      <td>...</td>
+      <td>0.000434</td>
+      <td>-0.000135</td>
+      <td>0.000743</td>
+      <td>0.000089</td>
+      <td>0.000117</td>
+      <td>-0.000134</td>
+      <td>0.986875</td>
+      <td>0.000202</td>
+      <td>-0.000087</td>
+      <td>0.000173</td>
+    </tr>
+    <tr>
+      <th>5835</th>
+      <td>0.001041</td>
+      <td>0.000022</td>
+      <td>-0.001285</td>
+      <td>0.000240</td>
+      <td>0.002463</td>
+      <td>0.000265</td>
+      <td>0.001933</td>
+      <td>0.000160</td>
+      <td>-0.000090</td>
+      <td>0.001231</td>
+      <td>...</td>
+      <td>-0.000131</td>
+      <td>0.000106</td>
+      <td>0.001018</td>
+      <td>-0.000364</td>
+      <td>-0.001070</td>
+      <td>-0.000215</td>
+      <td>0.000437</td>
+      <td>0.977129</td>
+      <td>0.001835</td>
+      <td>0.000813</td>
+    </tr>
+    <tr>
+      <th>5836</th>
+      <td>0.000155</td>
+      <td>0.000944</td>
+      <td>0.009559</td>
+      <td>-0.000157</td>
+      <td>-0.001217</td>
+      <td>-0.000007</td>
+      <td>-0.001265</td>
+      <td>0.001034</td>
+      <td>0.000235</td>
+      <td>-0.019356</td>
+      <td>...</td>
+      <td>0.000768</td>
+      <td>-0.000098</td>
+      <td>-0.000042</td>
+      <td>0.000477</td>
+      <td>0.000044</td>
+      <td>-0.000036</td>
+      <td>-0.000098</td>
+      <td>0.000990</td>
+      <td>0.978256</td>
+      <td>-0.000169</td>
+    </tr>
+    <tr>
+      <th>5837</th>
+      <td>-0.000292</td>
+      <td>-0.000115</td>
+      <td>0.000509</td>
+      <td>-0.000116</td>
+      <td>0.000227</td>
+      <td>-0.000163</td>
+      <td>-0.000506</td>
+      <td>0.001099</td>
+      <td>0.000145</td>
+      <td>0.000179</td>
+      <td>...</td>
+      <td>0.000127</td>
+      <td>0.000061</td>
+      <td>0.000073</td>
+      <td>0.000272</td>
+      <td>0.000012</td>
+      <td>-0.000197</td>
+      <td>0.000207</td>
+      <td>0.001338</td>
+      <td>-0.000338</td>
+      <td>0.993743</td>
+    </tr>
+  </tbody>
+</table>
+<p>5838 rows × 5838 columns</p>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
