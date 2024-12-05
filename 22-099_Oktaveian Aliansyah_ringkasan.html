@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,6 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '22-099_Oktaveian Aliansyah_ringkasan';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mencari kata kunci pada berita" href="22-099_Oktaveian%20Aliansyah_UTS.html" />
+    <link rel="prev" title="implementasi VSM TF-IDF menggunakan klasifikasi logistic regresion" href="22-099_Oktaveian%20Aliansyah_Logistic%20Regression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,10 +179,15 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="22_099_Oktaveian_Aliansyah_Tugas_1.html">crawling berita di kompas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_099_Oktaveian_Aliansyah_vektor_space_model.html">membuat vektor space model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22-099_Oktaveian%20Aliansyah_Logistic%20Regression.html">implementasi VSM TF-IDF menggunakan klasifikasi logistic regresion</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">meringkas berita</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="22-099_Oktaveian%20Aliansyah_UTS.html">mencari kata kunci pada berita</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="SVD.html">contoh</a></li>
 </ul>
 
     </div>
@@ -411,6 +416,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">string</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pi</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
@@ -423,15 +429,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to
-[nltk_data]     C:\Users\OKTAVIAN\AppData\Roaming\nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
-[nltk_data] Downloading package punkt_tab to
-[nltk_data]     C:\Users\OKTAVIAN\AppData\Roaming\nltk_data...
-[nltk_data]   Package punkt_tab is already up-to-date!
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">string</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">pi</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pi&#39;
 </pre></div>
 </div>
 </div>
@@ -1811,6 +1818,127 @@ Node 11: 0.0164
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="c1"># Load model and vectorizer from the pickle file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;logistic_regression_and_vectorizer.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">loaded_objects</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">loaded_objects</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">loaded_objects</span><span class="p">[</span><span class="s1">&#39;vectorizer&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ringkasan_pagerank</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tiga Node Tertinggi Page Rank Menggunakan Preprocessing dan Prediksi Kategori:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">pagerank_preprocessing</span> <span class="ow">in</span> <span class="n">sorted_page</span><span class="p">[:</span><span class="mi">140</span><span class="p">]:</span>
+    <span class="n">top_sentence</span> <span class="o">=</span> <span class="n">kalimat</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+    <span class="n">ringkasan_pagerank</span> <span class="o">+=</span> <span class="n">top_sentence</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
+    
+    <span class="c1"># Prediksi kategori menggunakan model logistic regression</span>
+    <span class="n">vectorized_sentence</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span><span class="n">top_sentence</span><span class="p">])</span>
+    <span class="n">predicted_category</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">vectorized_sentence</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: Page Rank = </span><span class="si">{</span><span class="n">pagerank_preprocessing</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kalimat: </span><span class="si">{</span><span class="n">top_sentence</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kategori: </span><span class="si">{</span><span class="n">predicted_category</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiga Node Tertinggi Page Rank Menggunakan Preprocessing dan Prediksi Kategori:
+Node 20: Page Rank = 0.1959
+Kalimat: baca : anggota dpr singgung pernyataan kontroversial calon dewas kpk benny mamoto sambo
+Kategori: Nasional
+
+Node 19: Page Rank = 0.1289
+Kalimat: benny mamoto dipercaya wakil sekretaris ncbinterpol indonesia .
+Kategori: Nasional
+
+Node 17: Page Rank = 0.0932
+Kalimat: dikutip laman resmi kompolnas benny menjabat dit ikamtrannas bareskrim polri .
+Kategori: Nasional
+
+Node 18: Page Rank = 0.0708
+Kalimat: setelahnya wakil direktur iiekonomi khusus bareskrim .
+Kategori: Nasional
+
+Node 16: Page Rank = 0.0650
+Kalimat: menjabat ketua harian kompolnas benny penyidik densus antiteror polri kepala unit ikeamanan negaraseparatis .
+Kategori: Nasional
+
+Node 12: Page Rank = 0.0603
+Kalimat: benny mamoto dipercaya menjabat ketua harian komisi kepolisian nasional kompolnas periode .
+Kategori: Nasional
+
+Node 13: Page Rank = 0.0470
+Kalimat: baca : calon anggota dewas benny mamoto ott kpk diatur undangundang benny mamoto dilantik presiden joko widodo jokowi sembilan anggota kompolnas jabatan agustus .
+Kategori: Nasional
+
+Node 15: Page Rank = 0.0359
+Kalimat: resmi melepaskan jabatannya ketua harian kompolnas menyerahkannya menteri koordinator menko bidang politik keamanan budi gunawan november .
+Kategori: Nasional
+
+Node 7: Page Rank = 0.0357
+Kalimat: baca : komisi iii dpr tetapkan anggota dewas kpk namanamanya pemilik nama lengkap benny jozua mamoto menempuh pendidikan akademi kepolisian akpol lulus .
+Kategori: Nasional
+
+Node 6: Page Rank = 0.0313
+Kalimat: berdasarkan suara diperoleh berdasarkan mekanisme pengambilan suara voting komisi iii dpr ri memilih merekomendasikan calon dewan pengawas kpk jabatan habiburokhman rapat pleno ruang rapat komisi iii dpr kompleks parlemen jakarta kamis siang .
+Kategori: Nasional
+
+Node 14: Page Rank = 0.0309
+Kalimat: ketua harian .
+Kategori: Nasional
+
+Node 9: Page Rank = 0.0292
+Kalimat: gelar s s benny studi kajian ilmu kepolisian universitas indonesia ui .
+Kategori: Nasional
+
+Node 5: Page Rank = 0.0252
+Kalimat: benny mamoto suara proses pemungutan suara .
+Kategori: Nasional
+
+Node 8: Page Rank = 0.0228
+Kalimat: benny mamoto berkuliah fakultas hukum universitas krisnadwipayana meraih gelar s .
+Kategori: Nasional
+
+Node 10: Page Rank = 0.0222
+Kalimat: pria kelahiran temanggung jawa juni lantas berkarier kepolisian .
+Kategori: Nasional
+
+Node 3: Page Rank = 0.0213
+Kalimat: hasil voting anggota dewas suara wisnu baroto benny jozua mamoto gusrizal .
+Kategori: Nasional
+
+Node 2: Page Rank = 0.0189
+Kalimat: nama benny mamoto terpilih hasil voting pemungutan suara merampungkan uji kelayanan kepatutan fit and proper test ruang komisi iii dpr kompleks parlemen senayan jakarta kamis .
+Kategori: Nasional
+
+Node 0: Page Rank = 0.0164
+Kalimat: jakarta kompas.com komisi iii dpr ri memilih anggota dewan pengawas dewas komisi pemberantasan korupsi kpk periode .
+Kategori: Nasional
+
+Node 1: Page Rank = 0.0164
+Kalimat: salah satunya benny mamoto .
+Kategori: Nasional
+
+Node 4: Page Rank = 0.0164
+Kalimat: sumpeno chisca mirawati .
+Kategori: Nasional
+
+Node 11: Page Rank = 0.0164
+Kalimat: berhasil mencapai jenjang kepangkatan inspektur jenderal irjen jenderal bintang institusi bhayangkara .
+Kategori: Nasional
+</pre></div>
+</div>
+</div>
+</div>
 <p>hasil rangkuman</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1826,14 +1954,14 @@ Node 11: 0.0164
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiga Node Tertinggi Page Rank Menggunakan Preprocessing:
-Node 20: Page Rank = 0.1959
-Kalimat: baca : anggota dpr singgung pernyataan kontroversial calon dewas kpk benny mamoto sambo
+Node 14: Page Rank = 0.1851
+Kalimat: fraksi dpr membahas mendalam aspek terkait ruu .
 
-Node 19: Page Rank = 0.1289
-Kalimat: benny mamoto dipercaya wakil sekretaris ncbinterpol indonesia .
+Node 13: Page Rank = 0.1422
+Kalimat: baca : jokowi komisi iii ruu perampasan aset disahkan politikus partai nasdem mengeklaim keterbatasan kendala utama mengesahkan ruu perampasan aset .
 
-Node 17: Page Rank = 0.0932
-Kalimat: dikutip laman resmi kompolnas benny menjabat dit ikamtrannas bareskrim polri .
+Node 11: Page Rank = 0.0960
+Kalimat: jokowi ruu perampasan aset diselesaikan .
 </pre></div>
 </div>
 </div>
@@ -1871,6 +1999,24 @@ Kalimat: dikutip laman resmi kompolnas benny menjabat dit ikamtrannas bareskrim 
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="22-099_Oktaveian%20Aliansyah_Logistic%20Regression.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">implementasi VSM TF-IDF menggunakan klasifikasi logistic regresion</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="22-099_Oktaveian%20Aliansyah_UTS.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">mencari kata kunci pada berita</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
