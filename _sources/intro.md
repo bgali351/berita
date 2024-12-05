@@ -1,6 +1,7 @@
 # Selamat datang di web statis saya
 
-[Berikut link web aplikasi implementasi](https://huggingface.co/spaces/bgali/cek_kategori_berita).
+Saya sendiri mahasiswa Universitas Trunojoyo Madura jurusan Teknik Informatika.
+[Berikut aplikasi web hasil implementasi](https://huggingface.co/spaces/bgali/cek_kategori_berita).
 
 Check out the content pages bundled with this sample book to see more.
 
