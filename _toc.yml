@@ -4,6 +4,9 @@
 format: jb-book
 root: intro
 chapters:
-  - file: markdown
-  - file: notebooks/SVD
-  - file: markdown-notebooks
+  - file: 22_099_Oktaveian_Aliansyah_Tugas_1
+  - file: 22_099_Oktaveian_Aliansyah_vektor_space_model
+  - file: 22-099_Oktaveian Aliansyah_Logistic Regression
+  - file: 22-099_Oktaveian Aliansyah_ringkasan
+  - file: 22-099_Oktaveian Aliansyah_UTS
+  - file: SVD
